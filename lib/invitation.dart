@@ -50,19 +50,23 @@ class _InvitationState extends State<Invitation> {
                 ),
                 const Padding(
                   padding: EdgeInsets.only(top: 10),
-                  child: Expanded(
-                    child: TextField(
-                      keyboardType: TextInputType.name,
-                      style: TextStyle(fontSize: 15, height: 0),
-                      decoration: InputDecoration(
-                        filled: true,
-                        hintText: 'Type Here',
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          keyboardType: TextInputType.name,
+                          style: TextStyle(fontSize: 15, height: 0),
+                          decoration: InputDecoration(
+                            filled: true,
+                            hintText: 'Type Here',
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
+                            fillColor: Colors.white,
+                          ),
                         ),
-                        fillColor: Colors.white,
                       ),
-                    ),
+                    ],
                   ),
                 ),
                 const SizedBox(
