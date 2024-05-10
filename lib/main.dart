@@ -1,5 +1,6 @@
 import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:lab5_activation/dashboard.dart';
 
 void main() {
@@ -108,13 +109,14 @@ class _HomePageState extends State<HomePage> {
       children: [
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Row(
-            children: [Expanded(
-                flex: 1,
-                child: Text(
-                  'Enter your mobile number to activate your account.',
-                  style: TextStyle(fontSize: 20),
-                )),
+          child: Row(children: [
+            const Expanded(
+              flex: 1,
+              child: Text(
+                'Enter your mobile number to activate your account.',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
             IconButton(
                 onPressed: () {}, icon: const Icon(Icons.info_outline_rounded))
           ]),
@@ -207,42 +209,42 @@ class _HomePageState extends State<HomePage> {
       children: [
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Row(children: [
-            const Expanded(
-                flex: 1,
-                child: Text(
-                  'Enter the activation code you received via SMS.',
-                  style: TextStyle(fontSize: 20),
-                )),
-            IconButton(
-                onPressed: () {}, icon: const Icon(Icons.info_outline_rounded))
-          ]),
+          child: Row(
+            children: [
+              const Expanded(
+                  flex: 1,
+                  child: Text(
+                    'Enter the activation code you received via SMS.',
+                    style: TextStyle(fontSize: 20),
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.info_outline_rounded))
+            ],
+          ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 10),
-            child: TextField(
-              onChanged: (value) {
-                setState(() {
-                  otp = (value.length).toString();
-                });
-              },
-              controller: OTP,
-              maxLength: 6,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 15, height: 0),
-              keyboardType: TextInputType.number,
-              autofocus: false,
-              decoration: InputDecoration(
-                filled: true,
-                hintText: 'OTP',
-                counterText: '$otp/6',
-                border: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-                fillColor: Colors.white,
+          padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+          child: TextField(
+            onChanged: (value) {
+              setState(() {
+                otp = (value.length).toString();
+              });
+            },
+            controller: OTP,
+            maxLength: 6,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 15, height: 0),
+            keyboardType: TextInputType.number,
+            autofocus: false,
+            decoration: InputDecoration(
+              filled: true,
+              hintText: 'OTP',
+              counterText: '$otp/6',
+              border: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
               ),
+              fillColor: Colors.white,
             ),
           ),
         ),
