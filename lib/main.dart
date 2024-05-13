@@ -169,6 +169,7 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             children: [
               Checkbox(
+                key: const Key('myCheckbox'),
                   value: checkbox,
                   onChanged: (bool? value) {
                     setState(() {
