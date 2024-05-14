@@ -24,7 +24,7 @@ workflows:
             cd android
             ./gradlew app:assembleAndroidTest
             ./gradlew app:assembleDebug -Ptarget="$CM_BUILD_DIR/integration_test/app_test.dart"
-        -name: Run Firebase Test Lab Tests
+        - name: Run Firebase Test Lab Tests
           scripy: |
             set -ex
             echo $GCLOUD_KEY_FILE | base64 --decode >./gcloud_key_file.json
