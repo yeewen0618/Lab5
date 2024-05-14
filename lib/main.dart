@@ -184,6 +184,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         ElevatedButton(
+          key: Key('getCode'),
           onPressed: contactNum.text.length >= 10 &&
                   contactNum.text.length <= 11 &&
                   checkbox
@@ -227,6 +228,7 @@ class _HomePageState extends State<HomePage> {
         Padding(
           padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
           child: TextField(
+            key: Key('otp'),
             onChanged: (value) {
               setState(() {
                 otp = (value.length).toString();
@@ -272,6 +274,7 @@ class _HomePageState extends State<HomePage> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
+            key: Key('activate'),
             onPressed: OTP.text.length == 6
                 ? () {
                     Navigator.of(context).pushReplacement(

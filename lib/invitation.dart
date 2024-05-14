@@ -54,6 +54,7 @@ class _InvitationState extends State<Invitation> {
                     children: [
                       Expanded(
                         child: TextField(
+                          key: Key('userName'),
                           keyboardType: TextInputType.name,
                           style: TextStyle(fontSize: 15, height: 0),
                           decoration: InputDecoration(
@@ -103,6 +104,7 @@ class _InvitationState extends State<Invitation> {
                       ),
                       const Expanded(
                         child: TextField(
+                          key: Key('phoneNumber'),
                           keyboardType: TextInputType.number,
                           style: TextStyle(fontSize: 10, height: 0),
                           decoration: InputDecoration(
@@ -125,6 +127,7 @@ class _InvitationState extends State<Invitation> {
                 Padding(
                   padding: const EdgeInsets.only(top: 15),
                   child: ElevatedButton(
+                    key: Key('submit'),
                     onPressed: () {
                       Navigator.of(context).pop(
                         MaterialPageRoute(

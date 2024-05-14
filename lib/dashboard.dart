@@ -75,6 +75,7 @@ class _DashboardState extends State<Dashboard> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
+                      key: Key('factory1'),
                       child: Container(
                           height: 145,
                           width: 160,
@@ -111,6 +112,7 @@ class _DashboardState extends State<Dashboard> {
                       width: 20,
                     ),
                     GestureDetector(
+                      key: Key('factory2'),
                       child: Container(
                           height: 145,
                           width: 160,
@@ -148,6 +150,7 @@ class _DashboardState extends State<Dashboard> {
                       width: 15,
                     ),
                     GestureDetector(
+                      key: Key('factory3'),
                       child: Container(
                           height: 145,
                           width: 160,
@@ -191,14 +194,17 @@ class _DashboardState extends State<Dashboard> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
+            key: Key('person'),
             label: '',
             icon: Icon(Icons.person),
           ),
           BottomNavigationBarItem(
+            key: Key('home'),
             label: '',
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
+            key: Key('settings'),
             label: '',
             icon: Icon(Icons.settings),
           ),
@@ -832,6 +838,7 @@ class _ContactState extends State<Contact> {
                       Padding(
                         padding: const EdgeInsets.only(right: 15, bottom: 15),
                         child: ElevatedButton(
+                          key: Key('add'),
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
