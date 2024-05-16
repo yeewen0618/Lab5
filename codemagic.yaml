@@ -36,11 +36,15 @@ workflows:
             --app build/app/outputs/apk/debug/app-debug.apk \
             --test build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
             --timeout 15m
+            --device model=Pixel2,version=30,locale=en,orientation=portrait \
+            --test-targets "class com.example.YourTestClass"
+            
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
+      
             
 
           
