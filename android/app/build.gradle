@@ -1,5 +1,6 @@
 plugins {
     id "com.android.application"
+    id 'com.google.gms.google-services'
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -66,10 +67,16 @@ flutter {
 }
 
 dependencies {
-     testImplementation 'junit:junit:4.12'
+    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+    testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 
     // https://developer.android.com/jetpack/androidx/releases/test/#1.2.0
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    
+    
 
 }
