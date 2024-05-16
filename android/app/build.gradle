@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.lab5_activation"
+    namespace "com.android.application"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
